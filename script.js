@@ -1,8 +1,12 @@
 const cinemaWrapper = document.getElementById("cinemaWrapper");
 let totalPriceDisplay = document.getElementById("totalPriceDisplay");
 
-let rows = 10;
-let columns = 10;
+const searchParams = new URLSearchParams(window.location.search);
+x = searchParams.get("m");
+y = searchParams.get("n");
+
+let rows = x;
+let columns = y;
 let totalPrice = 0;
 
 for (let i = 0; i < rows; i++) {
